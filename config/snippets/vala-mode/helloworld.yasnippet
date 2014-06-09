@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Hello World
+# key: h
+# --
+public class ${1:`(file-name-sans-extension (buffer-name))`} 
+{
+    public static int main(string[] args) 
+    {
+        stdout.printf("Hello world!");
+	return 0;
+    }
+}

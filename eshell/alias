@@ -1,0 +1,42 @@
+alias alert notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e 's/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//')" $*
+alias apt-get sudo apt-get $*
+alias clean sudo eclean distfiles $*
+alias cls clear $*
+alias debugc make debug $*
+alias deep-update sudo emerge --sync && sudo emerge -avu --deep --with-bdeps=y --newuse @world $*
+alias dir dir --color=auto $*
+alias eclimd /opt/eclipse/eclimd $*
+alias egrep egrep --color=auto $*
+alias em emacs -nw $*
+alias emc emacsclient --alternate-editor="" -c "$@" -n $*
+alias emerge sudo emerge -va $*
+alias fgrep fgrep --color=auto $*
+alias gb go build $*
+alias gclean go clean $*
+alias gd godoc $*
+alias gl go list $*
+alias godir cd /data/git/go $*
+alias gosrc cd /data/git/go/src $*
+alias gr go run $*
+alias grep grep --color=auto $*
+alias gt go test $*
+alias hibernate sudo hibernate $*
+alias l ls -CFh $*
+alias la ls -alFh --color=auto $*
+alias ll ls -lAh $*
+alias ls ls --color=auto $*
+alias m make $*
+alias nautilus sudo nautilus $*
+alias note3m mtpfs -o allow_other /media/Note $*
+alias note3unm sudo umount /media/Note $*
+alias portage-tail sudo tail -f /var/log/emerge-fetch.log $*
+alias r make run $*
+alias reboot sudo reboot $*
+alias revdep-rebuild sudo revdep-rebuild $*
+alias sem sudo emacs -nw $*
+alias semacs sudo emacs $*
+alias unmerge sudo emerge -va --unmerge $*
+alias update-all sudo apt-get update && sudo apt-get upgrade $*
+alias vdir vdir --color=auto $*
+alias x exit $*
+alias xampp sudo /opt/lampp/xampp $*

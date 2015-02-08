@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: flycheck
+# key: flyc
+# --
+/**
+ * flycheck: valac ${1:} %f
+ **/
+$0

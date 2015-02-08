@@ -1,0 +1,1056 @@
+;; Object uMapOrg/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "uMapOrg/"
+  :tables
+  (list
+    (semanticdb-table "editdialog.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("editdialog.hh" include nil nil [723 747])
+            ("ui_editdialog.h" include nil nil [748 774])
+            ("QDebug" include (:system-flag t) nil [775 792])
+            ("QFileDialog" include (:system-flag t) nil [793 815])
+            ("EditDialog" function
+               (:constructor-flag t
+                :parent "EditDialog"
+                :arguments 
+                  ( ("w" variable
+                       (:reference 1
+                        :type ("Worker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [841 851])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [852 868]))                  
+                :type ("EditDialog" type (:type "class") nil nil))
+                nil [818 1782])
+            ("onAccepted" function
+               (:parent "EditDialog"
+                :type "void")
+                nil [1784 2109])
+            ("onPhotoButtonClicked" function
+               (:parent "EditDialog"
+                :type "void")
+                nil [2111 2463])
+            ("EditDialog" function
+               (:destructor-flag t
+                :parent "EditDialog"
+                :type "void")
+                nil [2465 2527]))          
+      :file "editdialog.cpp"
+      :pointmax 2528
+      :fsize 2528
+      :lastmodtime '(21703 24065 601508 548000)
+      :unmatched-syntax nil)
+    (semanticdb-table "editdialog.hh"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("EDITDIALOG_HH" variable (:constant-flag t) nil [734 747])
+            ("QDialog" include (:system-flag t) nil [749 767])
+            ("QPixmap" include (:system-flag t) nil [768 786])
+            ("worker.hh" include nil nil [787 807])
+            ("Worker" type
+               (:prototype t
+                :type "class")
+                nil [809 822])
+            ("Ui" type
+               (:members 
+                  ( ("EditDialog" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [838 855]))                  
+                :type "namespace")
+                nil [823 857])
+            ("EditDialog" type
+               (:superclasses 
+                  ( ("QDialog" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [909 916])
+                    ("EditDialog" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("w" variable
+                               (:reference 1
+                                :type ("Worker" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [941 951])
+                            ("parent" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [952 977]))                          
+                        :type ("EditDialog" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [930 979])
+                    ("EditDialog" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [984 998])
+                    ("private" label nil (reparse-symbol classsubparts) [1000 1008])
+                    ("ui" variable
+                       (:pointer 1
+                        :type ("Ui::EditDialog" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1013 1032])
+                    ("scene" variable
+                       (:pointer 1
+                        :type ("QGraphicsScene" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1037 1059])
+                    ("pixmap" variable (:type ("QPixmap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1064 1079])
+                    ("image" variable (:type ("QImage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1084 1097])
+                    ("worker" variable
+                       (:pointer 1
+                        :type ("Worker" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1102 1117])
+                    ("private" label nil (reparse-symbol classsubparts) [1118 1132])
+                    ("onAccepted" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1137 1155])
+                    ("onPhotoButtonClicked" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1160 1188]))                  
+                :type "class")
+                nil [859 1191]))          
+      :file "editdialog.hh"
+      :pointmax 1217
+      :fsize 1217
+      :lastmodtime '(21699 13987 699734 21000)
+      :unmatched-syntax '((EXPLICIT 921 . 929) (symbol 899 . 907))
+      :lexical-table 
+        '(("EDITDIALOG_HH")
+          )
+)
+    (semanticdb-table "worker.hh"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("WORKER_HH" variable (:constant-flag t) nil [730 739])
+            ("QGraphicsItem" include (:system-flag t) nil [741 765])
+            ("QPainter" include (:system-flag t) nil [766 785])
+            ("QImage" include (:system-flag t) nil [786 803])
+            ("CoreWorker" type
+               (:members 
+                  ( ("mFirstName" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [829 848])
+                    ("mLastName" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [853 871])
+                    ("mTitle" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [876 891])
+                    ("mAbout" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [896 911])
+                    ("image" variable (:type ("QImage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [916 929])
+                    ("mIsMember" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [934 957])
+                    ("mIsActive" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [962 985])
+                    ("mIsLeader" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [990 1013])
+                    ("mIsHostile" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1018 1042]))                  
+                :type "struct")
+                nil [805 1045])
+            ("Worker" type
+               (:superclasses 
+                  ( ("QObject" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("QGraphicsItem" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1172 1179])
+                    ("Worker" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :default-value "0"
+                                :type ("QGraphicsItem" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1210 1235]))                          
+                        :type ("Worker" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1203 1237])
+                    ("Worker" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1242 1252])
+                    ("boundingRect" function
+                       (:prototype-flag t
+                        :type ("QRectF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1291 1319])
+                    ("paint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("painter" variable
+                               (:pointer 1
+                                :type ("QPainter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1362 1381])
+                            ("option" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("QStyleOptionGraphicsItem" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1397 1437])
+                            ("widget" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1453 1470]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1351 1471])
+                    ("getFullName" function
+                       (:prototype-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1528 1556])
+                    ("getFirstName" function
+                       (:prototype-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1561 1590])
+                    ("getLastName" function
+                       (:prototype-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1595 1623])
+                    ("getAbout" function
+                       (:prototype-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1628 1653])
+                    ("getImage" function
+                       (:prototype-flag t
+                        :type ("QImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1658 1682])
+                    ("isMember" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1687 1703])
+                    ("setMember" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [1723 1734]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1708 1735])
+                    ("setAbout" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("about" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1754 1775]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1740 1776])
+                    ("setName" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("FirstLastNameWithSpace" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1794 1832]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1781 1833])
+                    ("setName" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("FirstName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1851 1876])
+                            ("LastName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1877 1901]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1838 1902])
+                    ("setImage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("imagePath" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1921 1939]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1907 1940])
+                    ("setImage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("image" variable (:type ("QImage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1959 1972]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1945 1973])
+                    ("setWorkerToolTip" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1981 2005])
+                    ("editWorker" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2010 2028])
+                    ("changed" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("w" variable
+                               (:pointer 1
+                                :type ("Worker" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2056 2066]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2043 2067])
+                    ("protected" label nil (reparse-symbol classsubparts) [2069 2079])
+                    ("mouseDoubleClickEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("event" variable
+                               (:pointer 1
+                                :type ("QGraphicsSceneMouseEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2142 2174]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2115 2175])
+                    ("private" label nil (reparse-symbol classsubparts) [2177 2185])
+                    ("photoPath" variable
+                       (:default-value "\":/images/avatar_f_200x200.png\""
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2190 2242])
+                    ("pCore" variable (:type ("CoreWorker" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2248 2265])
+                    ("EditDialog" friend nil (reparse-symbol classsubparts) [2270 2293]))                  
+                :type "class")
+                nil [1074 2297]))          
+      :file "worker.hh"
+      :pointmax 2319
+      :fsize 2319
+      :lastmodtime '(21698 48987 592872 658000)
+      :unmatched-syntax '((punctuation 2293 . 2294) (punctuation 2037 . 2038) (symbol 2030 . 2037) (semantic-list 1156 . 1171) (symbol 1144 . 1156) (symbol 1131 . 1139))
+      :lexical-table 
+        '(("WORKER_HH")
+          )
+)
+    (semanticdb-table "mainwindow.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("mainwindow.hh" include nil nil [704 728])
+            ("ui_mainwindow.h" include nil nil [729 755])
+            ("view.hh" include nil nil [756 774])
+            ("constants.hh" include nil nil [775 798])
+            ("MainWindow" function
+               (:constructor-flag t
+                :parent "MainWindow"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [824 840]))                  
+                :type ("MainWindow" type (:type "class") nil nil))
+                nil [801 1033])
+            ("MainWindow" function
+               (:destructor-flag t
+                :parent "MainWindow"
+                :type "void")
+                nil [1035 1213])
+            ("createActions" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [1215 1956])
+            ("createMenus" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [1958 2212]))          
+      :file "mainwindow.cpp"
+      :pointmax 2213
+      :fsize 2213
+      :lastmodtime '(21703 32287 310451 999000)
+      :unmatched-syntax nil)
+    (semanticdb-table "mainwindow.hh"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("MAINWINDOW_H" variable (:constant-flag t) nil [733 745])
+            ("QMainWindow" include (:system-flag t) nil [747 769])
+            ("QSharedPointer" include (:system-flag t) nil [770 795])
+            ("filetab.hh" include nil nil [796 817])
+            ("FileTab" type
+               (:prototype t
+                :type "class")
+                nil [819 833])
+            ("Ui" type
+               (:members 
+                  ( ("MainWindow" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [850 867]))                  
+                :type "namespace")
+                nil [835 869])
+            ("MainWindow" type
+               (:superclasses 
+                  ( ("QMainWindow" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [925 932])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [957 982]))                          
+                        :type ("MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [946 984])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [989 1003])
+                    ("newSiteAct" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1008 1038])
+                    ("openSiteAct" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1043 1073])
+                    ("newWorkerAct" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1078 1109])
+                    ("fileMenu" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QMenu" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1114 1139])
+                    ("siteMenu" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QMenu" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1144 1169])
+                    ("private" label nil (reparse-symbol classsubparts) [1171 1179])
+                    ("ui" variable
+                       (:pointer 1
+                        :type ("Ui::MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1185 1204])
+                    ("filetab" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("FileTab" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1209 1236])
+                    ("createActions" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1241 1262])
+                    ("createMenus" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1267 1286]))                  
+                :type "class")
+                nil [871 1289]))          
+      :file "mainwindow.hh"
+      :pointmax 1314
+      :fsize 1314
+      :lastmodtime '(21698 56946 136893 449000)
+      :unmatched-syntax '((EXPLICIT 937 . 945) (symbol 915 . 923))
+      :lexical-table 
+        '(("MAINWINDOW_H")
+          )
+)
+    (semanticdb-table "view.hh"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("VIEW_HH" variable (:constant-flag t) nil [728 735])
+            ("QGraphicsView" include (:system-flag t) nil [736 760])
+            ("QGraphicsScene" include (:system-flag t) nil [761 786])
+            ("filetab.hh" include nil nil [787 808])
+            ("site.hh" include nil nil [809 827])
+            ("Site" type
+               (:prototype t
+                :type "class")
+                nil [829 840])
+            ("FileTab" type
+               (:prototype t
+                :type "class")
+                nil [841 855])
+            ("View" type
+               (:superclasses 
+                  ( ("QGraphicsView" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [906 913])
+                    ("View" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("FileTab" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [932 948]))                          
+                        :type ("View" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [927 949])
+                    ("View" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [954 962])
+                    ("createSite" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("Site" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [967 986])
+                    ("getSite" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("Site" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [991 1007])
+                    ("public" label nil (reparse-symbol classsubparts) [1009 1022])
+                    ("slotTest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1027 1043])
+                    ("private" label nil (reparse-symbol classsubparts) [1045 1053])
+                    ("site" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("Site" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1058 1079]))                  
+                :type "class")
+                nil [857 1082]))          
+      :file "view.hh"
+      :pointmax 1102
+      :fsize 1102
+      :lastmodtime '(21622 65196 458005 424000)
+      :unmatched-syntax '((EXPLICIT 918 . 926) (symbol 897 . 905))
+      :lexical-table 
+        '(("VIEW_HH")
+          )
+)
+    (semanticdb-table "constants.hh"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CONSTANTS_HH" variable (:constant-flag t) nil [732 744])
+            ("QString" include (:system-flag t) nil [745 763])
+            ("UMapOrg" type
+               (:members 
+                  ( ("AppIcon" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [785 833])
+                    ("WorkerIcon" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [834 887])
+                    ("SiteIcon" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [888 937])
+                    ("RedDot" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [938 988])
+                    ("GreenDot" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [989 1043])
+                    ("AddWorker" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1044 1100]))                  
+                :type "namespace")
+                nil [765 1103]))          
+      :file "constants.hh"
+      :pointmax 1127
+      :fsize 1127
+      :lastmodtime '(21621 53493 278971 439000)
+      :unmatched-syntax '((string 1075 . 1098) (string 1019 . 1041) (string 966 . 986) (string 918 . 935) (string 866 . 885) (string 814 . 831))
+      :lexical-table 
+        '(("CONSTANTS_HH")
+          )
+)
+    (semanticdb-table "filetab.hh"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FILETAB_HH" variable (:constant-flag t) nil [731 741])
+            ("QTabWidget" include (:system-flag t) nil [742 763])
+            ("QGraphicsScene" include (:system-flag t) nil [764 789])
+            ("mainwindow.hh" include nil nil [791 815])
+            ("view.hh" include nil nil [816 834])
+            ("site.hh" include nil nil [835 853])
+            ("View" type
+               (:prototype t
+                :type "class")
+                nil [855 866])
+            ("MainWindow" type
+               (:prototype t
+                :type "class")
+                nil [867 884])
+            ("FileTab" type
+               (:superclasses 
+                  ( ("QTabWidget" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [937 944])
+                    ("FileTab" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("MainWindow" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [957 977]))                          
+                        :type ("FileTab" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [949 978])
+                    ("window" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "0"
+                        :type ("MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [983 1011])
+                    ("currentView" variable
+                       (:pointer 1
+                        :default-value "0"
+                        :type ("View" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1016 1037])
+                    ("public" label nil (reparse-symbol classsubparts) [1040 1053])
+                    ("newSiteTab" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1058 1076])
+                    ("openSite" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1081 1097])
+                    ("private" label nil (reparse-symbol classsubparts) [1098 1106])
+                    ("oldTabIndex" variable (:type "int") (reparse-symbol classsubparts) [1111 1127])
+                    ("private" label nil (reparse-symbol classsubparts) [1129 1143])
+                    ("onTabCloseRequested" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1173 1183]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1148 1184])
+                    ("onTabSwitch" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1207 1217]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1190 1218]))                  
+                :type "class")
+                nil [887 1221]))          
+      :file "filetab.hh"
+      :pointmax 1245
+      :fsize 1245
+      :lastmodtime '(21621 53493 732309 551000)
+      :unmatched-syntax '((symbol 927 . 935))
+      :lexical-table 
+        '(("FILETAB_HH")
+          )
+)
+    (semanticdb-table "site.hh"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SITE_HH" variable (:constant-flag t) nil [728 735])
+            ("QPainter" include (:system-flag t) nil [736 755])
+            ("QGraphicsItem" include (:system-flag t) nil [756 780])
+            ("QGraphicsScene" include (:system-flag t) nil [781 806])
+            ("QList" include (:system-flag t) nil [807 823])
+            ("QMenu" include (:system-flag t) nil [824 840])
+            ("QGraphicsSceneContextMenuEvent" include (:system-flag t) nil [841 882])
+            ("worker.hh" include nil nil [883 903])
+            ("view.hh" include nil nil [904 922])
+            ("View" type
+               (:prototype t
+                :type "class")
+                nil [924 935])
+            ("CoreSite" type
+               (:members 
+                  ( ("mSiteName" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [959 977])
+                    ("mSiteDescription" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [982 1007])
+                    ("mImage" variable (:type ("QImage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1012 1026])
+                    ("mNoOfWorkers" variable (:type "int") (reparse-symbol classsubparts) [1031 1051])
+                    ("mNoOfMembers" variable (:type "int") (reparse-symbol classsubparts) [1056 1076])
+                    ("mDensity" variable (:type "double") (reparse-symbol classsubparts) [1081 1102]))                  
+                :type "struct")
+                nil [937 1105])
+            ("Site" type
+               (:superclasses 
+                  ( ("QObject" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("QGraphicsItem" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1230 1237])
+                    ("Site" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("v" variable
+                               (:pointer 1
+                                :type ("View" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1248 1257])
+                            ("parent" variable
+                               (:pointer 1
+                                :default-value "0"
+                                :type ("QGraphicsItem" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1258 1284]))                          
+                        :type ("Site" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1243 1286])
+                    ("Site" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1291 1299])
+                    ("boundingRect" function
+                       (:prototype-flag t
+                        :type ("QRectF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1305 1333])
+                    ("paint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("painter" variable
+                               (:pointer 1
+                                :type ("QPainter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1376 1395])
+                            ("option" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("QStyleOptionGraphicsItem" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1411 1451])
+                            ("widget" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1467 1484]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1365 1485])
+                    ("addWorker" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("name" variable
+                               (:default-value "\"\""
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1509 1526])
+                            ("newOne" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1528 1547]))                          
+                        :type ("Worker" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1491 1549])
+                    ("setImage" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1575 1595]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1554 1596])
+                    ("setSiteToolTip" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1601 1623])
+                    ("setName" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1641 1661]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1628 1662])
+                    ("setDescription" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("description" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1687 1714]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1667 1715])
+                    ("setWorkersPosition" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("rowSize" variable
+                               (:default-value "6"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1745 1760]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1721 1762])
+                    ("remWorker" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("worker" variable
+                               (:pointer 1
+                                :type ("Worker" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1782 1797]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1767 1798])
+                    ("getName" function
+                       (:prototype-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1804 1828])
+                    ("public" label nil (reparse-symbol classsubparts) [1829 1842])
+                    ("slotAddWorker" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1847 1868])
+                    ("renameSite" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1873 1891])
+                    ("private" label nil (reparse-symbol classsubparts) [1893 1901])
+                    ("pCore" variable (:type ("CoreSite" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1906 1921])
+                    ("pView" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("View" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1926 1948])
+                    ("pRightClickMenu" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QMenu" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1953 1986])
+                    ("mListWorkers" variable (:type ("QList" type
+                         (:template-specifier 
+                            ( ("Worker" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1992 2021])
+                    ("itemWidth" variable
+                       (:constant-flag t
+                        :default-value "130.0"
+                        :type "double")
+                        (reparse-symbol classsubparts) [2027 2058])
+                    ("setRowPosition" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [2083 2093])
+                            ("end" variable (:type "int") (reparse-symbol arg-sub-list) [2094 2102])
+                            ("rowNumber" variable (:type "int") (reparse-symbol arg-sub-list) [2103 2117]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2063 2118])
+                    ("contextMenu" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("event" variable
+                               (:pointer 1
+                                :type ("QGraphicsSceneContextMenuEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2140 2178]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2123 2179])
+                    ("protected" label nil (reparse-symbol classsubparts) [2181 2191])
+                    ("mouseDoubleClickEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("event" variable
+                               (:pointer 1
+                                :type ("QGraphicsSceneMouseEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2254 2286]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2227 2287])
+                    ("contextMenuEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("event" variable
+                               (:pointer 1
+                                :type ("QGraphicsSceneContextMenuEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2315 2353]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2293 2354]))                  
+                :type "class")
+                nil [1133 2357]))          
+      :file "site.hh"
+      :pointmax 2378
+      :fsize 2378
+      :lastmodtime '(21698 56195 80136 971000)
+      :unmatched-syntax '((semantic-list 1213 . 1228) (symbol 1201 . 1213) (symbol 1188 . 1196))
+      :lexical-table 
+        '(("SITE_HH")
+          )
+)
+    (semanticdb-table "site.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("QDebug" include (:system-flag t) nil [704 721])
+            ("site.hh" include nil nil [722 740])
+            ("constants.hh" include nil nil [741 764])
+            ("Site" function
+               (:constructor-flag t
+                :parent "Site"
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("View" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [777 786])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QGraphicsItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [787 810]))                  
+                :type ("Site" type (:type "class") nil nil))
+                nil [766 953])
+            ("Site" function
+               (:destructor-flag t
+                :parent "Site"
+                :type "void")
+                nil [955 1068])
+            ("boundingRect" function
+               (:parent "Site"
+                :type ("QRectF" type (:type "class") nil nil))
+                nil [1072 1165])
+            ("setImage" function
+               (:parent "Site"
+                :arguments 
+                  ( ("path" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1187 1207]))                  
+                :type "void")
+                nil [1167 1244])
+            ("paint" function
+               (:parent "Site"
+                :arguments 
+                  ( ("painter" variable
+                       (:pointer 1
+                        :type ("QPainter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1263 1281])
+                    ("option" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("QStyleOptionGraphicsItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1282 1321])
+                    ("widget" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1341 1357]))                  
+                :type "void")
+                nil [1246 1605])
+            ("mouseDoubleClickEvent" function
+               (:parent "Site"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QGraphicsSceneMouseEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1640 1672]))                  
+                :type "void")
+                nil [1607 1721])
+            ("contextMenuEvent" function
+               (:parent "Site"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QGraphicsSceneContextMenuEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1751 1789]))                  
+                :type "void")
+                nil [1723 1817])
+            ("contextMenu" function
+               (:parent "Site"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QGraphicsSceneContextMenuEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1842 1880]))                  
+                :type "void")
+                nil [1819 2461])
+            ("slotAddWorker" function
+               (:parent "Site"
+                :type "void")
+                nil [2463 2528])
+            ("setSiteToolTip" function
+               (:parent "Site"
+                :type "void")
+                nil [2530 2724])
+            ("setName" function
+               (:parent "Site"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2745 2765]))                  
+                :type "void")
+                nil [2726 2792])
+            ("setDescription" function
+               (:parent "Site"
+                :arguments 
+                  ( ("description" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2820 2847]))                  
+                :type "void")
+                nil [2794 2888])
+            ("getName" function
+               (:parent "Site"
+                :type ("QString" type (:type "class") nil nil))
+                nil [2890 2945])
+            ("setWorkersPosition" function
+               (:parent "Site"
+                :arguments 
+                  ( ("rowSize" variable (:type "int") (reparse-symbol arg-sub-list) [3006 3018]))                  
+                :type "void")
+                nil [2976 3239])
+            ("renameSite" function
+               (:parent "Site"
+                :type "void")
+                nil [3241 3676])
+            ("setRowPosition" function
+               (:parent "Site"
+                :arguments 
+                  ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [3704 3714])
+                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [3715 3723])
+                    ("rowNumber" variable (:type "int") (reparse-symbol arg-sub-list) [3724 3738]))                  
+                :type "void")
+                nil [3678 4159])
+            ("addWorker" function
+               (:pointer 1
+                :parent "Site"
+                :arguments 
+                  ( ("name" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4185 4198])
+                    ("newOne" variable (:type "bool") (reparse-symbol arg-sub-list) [4199 4211]))                  
+                :type ("Worker" type (:type "class") nil nil))
+                nil [4161 4637])
+            ("remWorker" function
+               (:parent "Site"
+                :arguments 
+                  ( ("worker" variable
+                       (:pointer 1
+                        :type ("Worker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4660 4675]))                  
+                :type "void")
+                nil [4639 4734]))          
+      :file "site.cpp"
+      :pointmax 4735
+      :fsize 4735
+      :lastmodtime '(21703 35120 89257 671000)
+      :unmatched-syntax nil))
+  :file "!data!git!uMapOrg!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

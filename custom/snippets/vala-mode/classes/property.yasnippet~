@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: property
+# key: prop
+# --
+/* property description can be used at run time */
+[Description(nick = "${3:what this property holds?}", blurb = "${4: detailed information about the property}")]
+
+public ${1:string} ${2:name};
+{
+    get;
+    set;
+    default = $5;
+} $0

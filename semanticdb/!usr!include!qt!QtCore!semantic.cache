@@ -1,0 +1,266 @@
+;; Object QtCore/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "QtCore/"
+  :tables
+  (list
+    (semanticdb-table "qdebug.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("QDEBUG_H" variable (:constant-flag t) nil [1622 1630])
+            ("QtCore/qalgorithms.h" include (:system-flag t) nil [1632 1663])
+            ("QtCore/qhash.h" include (:system-flag t) nil [1664 1689])
+            ("QtCore/qlist.h" include (:system-flag t) nil [1690 1715])
+            ("QtCore/qmap.h" include (:system-flag t) nil [1716 1740])
+            ("QtCore/qpair.h" include (:system-flag t) nil [1741 1766])
+            ("QtCore/qtextstream.h" include (:system-flag t) nil [1767 1798])
+            ("QtCore/qstring.h" include (:system-flag t) nil [1799 1826])
+            ("QtCore/qvector.h" include (:system-flag t) nil [1827 1854])
+            ("QtCore/qset.h" include (:system-flag t) nil [1855 1879])
+            ("QtCore/qcontiguouscache.h" include (:system-flag t) nil [1880 1916])
+            ("QDebug" variable (:type ("Q_CORE_EXPORT" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1939 6193])
+            ("QDebugStateSaverPrivate" type
+               (:prototype t
+                :type "class")
+                nil [6221 6251])
+            ("QDebugStateSaver" variable (:type ("Q_CORE_EXPORT" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [6252 6454])
+            ("QNoDebug" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [6473 6480])
+                    ("<<" function
+                       (:operator-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("" variable (:type ("QTextStreamFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6513 6533]))                          
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6485 6551])
+                    ("<<" function
+                       (:operator-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("" variable (:type ("QTextStreamManipulator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6584 6607]))                          
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6556 6625])
+                    ("space" function
+                       (:typemodifiers ("inline")
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6630 6672])
+                    ("nospace" function
+                       (:typemodifiers ("inline")
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6677 6721])
+                    ("maybeSpace" function
+                       (:typemodifiers ("inline")
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6726 6773])
+                    ("quote" function
+                       (:typemodifiers ("inline")
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6778 6820])
+                    ("noquote" function
+                       (:typemodifiers ("inline")
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6825 6869])
+                    ("maybeQuote" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [6902 6918]))                          
+                        :type ("QNoDebug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6874 6937])
+                    ("<<" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("QNoDebug" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6996 7006]))                          
+                        :typemodifiers ("inline")
+                        :operator-flag t)
+                        (reparse-symbol classsubparts) [6943 7024]))                  
+                :type "class")
+                nil [6456 7027])
+            ("=" function
+               (:operator-flag t
+                :parent "QDebug"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("other" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QDebug" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7062 7082]))                  
+                :type ("QDebug" type (:type "class") nil nil))
+                nil [7029 7200])
+            ("<<" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7246 7259])
+                    ("list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QList" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7260 7281]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [7202 7606])
+            ("<<" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7655 7668])
+                    ("vec" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QVector" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7669 7691]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [7608 7870])
+            ("<<" function
+               (:template 
+                  ( ("aKey" type (:type "class") nil nil)
+                    ("aT" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7929 7942])
+                    ("map" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QMap" type
+                             (:template-specifier 
+                                ( ("aKey" type nil nil nil)
+                                  ("aT" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7943 7969]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [7872 8331])
+            ("<<" function
+               (:template 
+                  ( ("aKey" type (:type "class") nil nil)
+                    ("aT" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8390 8403])
+                    ("hash" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QHash" type
+                             (:template-specifier 
+                                ( ("aKey" type nil nil nil)
+                                  ("aT" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8404 8432]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [8333 8793])
+            ("<<" function
+               (:template 
+                  ( ("T1" type (:type "class") nil nil)
+                    ("T2" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8850 8863])
+                    ("pair" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QPair" type
+                             (:template-specifier 
+                                ( ("T1" type nil nil nil)
+                                  ("T2" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8864 8890]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [8795 9098])
+            ("<<" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9147 9160])
+                    ("set" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QSet" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9161 9180]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [9100 9356])
+            ("<<" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9402 9415])
+                    ("cache" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QContiguousCache" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9416 9449]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [9358 9807])
+            ("<<" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("QDebug" type (:type "class") nil nil)
+                :arguments 
+                  ( ("debug" variable (:type ("QDebug" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9853 9866])
+                    ("flags" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QFlags" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9867 9890]))                  
+                :typemodifiers ("inline")
+                :operator-flag t)
+                nil [9809 10351]))          
+      :file "qdebug.h"
+      :pointmax 10390
+      :fsize 10389
+      :lastmodtime '(21633 56389 0 0)
+      :unmatched-syntax '((symbol 10353 . 10369) (semantic-list 6211 . 6219) (symbol 6195 . 6211) (symbol 1918 . 1936))
+      :lexical-table 
+        '(("QDEBUG_H")
+          )
+))
+  :file "!usr!include!qt!QtCore!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

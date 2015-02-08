@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: debug
+# key: deb
+# --
+stdout.printf("\n\n DEBUGGING HERE \n\n");

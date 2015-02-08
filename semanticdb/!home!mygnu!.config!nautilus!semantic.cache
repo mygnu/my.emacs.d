@@ -1,0 +1,16 @@
+;; Object nautilus/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "nautilus/"
+  :tables
+  (list
+    (semanticdb-table "accels"
+      :major-mode 'scheme-mode
+      :tags nil
+      :file "accels"
+      :pointmax 8057
+      :fsize 8056
+      :lastmodtime '(21712 50419 441726 66000)
+      :unmatched-syntax '((semantic-list 7089 . 7147) (semantic-list 4907 . 4973) (semantic-list 3615 . 3673) (semantic-list 1015 . 1070) (semantic-list 545 . 607) (semantic-list 7090 . 7148) (semantic-list 4908 . 4974) (semantic-list 3616 . 3674) (semantic-list 1015 . 1070) (semantic-list 545 . 607) (semantic-list 4908 . 4974) (semantic-list 3616 . 3674) (semantic-list 1015 . 1070) (semantic-list 545 . 607))))
+  :file "!home!mygnu!.config!nautilus!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

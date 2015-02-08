@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: head
+# key: head
+# --
+/* Copyright 2014 MyGNU
+ *
+ * This file is part of the ${1:name} package
+ *
+ * This software is licensed under the GNU Lesser General Public License
+ * (version 3 or later). See the COPYING file in this distribution.
+ */

@@ -149,7 +149,6 @@
 
 (global-set-key (kbd "<f10>") 'sr-speedbar-toggle)
 (global-set-key (kbd "M-<f10>") 'ecb-activate)
-(global-set-key (kbd "<f11>") 'hg-exit-eshell-after-complie)
 
 ;; ;;Cprogramming related commands
 

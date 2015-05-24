@@ -1,0 +1,7 @@
+auto-save-list
+*.elc
+desktop
+emacs-backup/
+ido.last
+recentf
+elpa

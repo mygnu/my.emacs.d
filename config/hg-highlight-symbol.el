@@ -2,7 +2,7 @@
   (package-refresh-contents) (package-install 'highlight-symbol))
 
 
-(require 'highlight-symbol-autoloads)
+;(require 'highlight-symbol-autoloads)
 (highlight-symbol-mode t)
 
 (provide 'hg-highlight-symbol)

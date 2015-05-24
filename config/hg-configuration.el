@@ -76,7 +76,7 @@
                                         ;(require 'hg-expand-region)
 (require 'hg-fci)
 (require 'hg-flycheck)
-(require 'hg-flymake)
+;;(require 'hg-flymake)
                                         ;(require 'hg-go-mode)
                                         ;(require 'hg-google-this)
 (require 'hg-header2)
@@ -85,40 +85,17 @@
 (require 'hg-ido)
 (require 'hg-key-bindings)
                                         ;(require 'hg-multiple-cursor)
-(require 'hg-java)
+;(require 'hg-java)
 (require 'hg-prog-mode)
                                         ;(require 'hg-python)
                                         ;(require 'hg-scala)
 (require 'hg-shell-mode)
 
 (require 'hg-sr-speedbar)
-(require 'hg-vala-mode)
+;(require 'hg-vala-mode)
                                         ;(require 'hg-web-mode)
 (require 'hg-whole-line-or-region)
 (require 'hg-yasnippet)
-
-
-
-
-
-(hg-full-ui)
-
-;;defined in gh-defun
-;; (require 'highlight-tail)
-
-;; (highlight-tail-mode)
-;; (setq highlight-tail-steps 10
-;;       highlight-tail-timer 0.2)
-;; (setq highlight-tail-colors '(("black" . 10)
-;;                               ("#bc2525" . 32)
-;;                               ("pink" . 36)))
-
-                                        ;(setq highlight-tail-posterior-type 'const)
-
-
-
-
-
 
 
 (provide 'hg-configuration)

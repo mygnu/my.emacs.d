@@ -1,11 +1,11 @@
 
 ;;INIT.el folders
 
-(add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/config")
+(add-to-list 'load-path "/data/git/my.emacs.d")
+(add-to-list 'load-path "/data/git/my.emacs.d/config")
 
 (require 'hg-elpa-packages)
-;(add-hook 'after-init-hook (lambda () (load "~/.emacs.d/config/hg-configuration.el")))
+                                        ;(add-hook 'after-init-hook (lambda () (load "~/.emacs.d/config/hg-configuration.el")))
 (require 'hg-configuration)
 
 
@@ -16,17 +16,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ac-dictionary-directories (quote ("/home/mygnu/.emacs.d/elpa/auto-complete-20140414.2324/dict")))
  '(ac-user-dictionary (quote ("~/.emacs.d/config/dict")))
  '(ccm-vpos-init (quote (round (* 21 (window-text-height)) 34)))
  '(column-number-mode t)
  '(delete-selection-mode t)
  '(desktop-base-file-name "~/.emacs.d/desktop")
  '(desktop-save-mode t)
- '(ecb-options-version "2.40")
- '(eclim-eclipse-dirs (quote ("/opt/eclipse" "/usr/lib/eclipse" "/usr/local/lib/eclipse" "/usr/share/eclipse")))
- '(eclim-executable "/opt/eclipse/eclim")
- '(eclimd-default-workspace "~/git/CS101")
  '(expand-region-skip-whitespace nil)
  '(fill-column 72)
  '(flymake-log-file-name "~/.emacs.d/flymake.log")
@@ -77,9 +72,7 @@ General Public License for more details.")
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Anonymous Pro" :foundry "unknown" :slant normal :weight normal :height 165 :width normal))))
+ '(default ((t (:family "Inconsolata" :foundry "unknown" :slant normal :weight normal :height 150 :width normal))))
  '(flymake-errline ((t (:foreground "red"))))
  '(font-lock-warning-face ((t (:foreground "red" :weight bold))))
  '(hi-blue-b ((t (:foreground "deep sky blue" :weight bold)))))
-
-

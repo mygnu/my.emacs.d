@@ -4,13 +4,20 @@
 (unless (package-installed-p 'solarized-theme)
   (package-refresh-contents) (package-install 'solarized-theme))
 
+(unless (package-installed-p 'monokai-theme)
+  (package-refresh-contents) (package-install 'monokai-theme))
+
+(unless (package-installed-p 'powerline)
+  (package-refresh-contents) (package-install 'powerline))
+
 (require 'color-theme)
 (color-theme-initialize)
 (setq color-theme-is-global t)
-(color-theme-clarity)
-;; Color theme settings
-;;(color-theme-initialize)
-;;(require 'solarized-dark-theme)
+;(color-theme-clarity)
+(load-theme 'monokai t)
+
+;; load powerline default theme
+(powerline-default-theme)
 
 ;; (color-theme-subtle-hacker)
 ;; (custom-set-faces

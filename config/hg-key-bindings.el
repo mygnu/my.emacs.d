@@ -40,10 +40,12 @@
 (global-set-key (kbd "C-r i") 'ido-imenu)
 (global-set-key (kbd "C-r q") 'hg-toggle-quotes)
 (global-set-key (kbd "C-r a") 'ace-jump-mode)
-;; java
-(global-set-key (kbd "C-r e s") 'start-eclimd)
-(global-set-key (kbd "C-r e k") 'stop-eclimd)
-(global-set-key (kbd "C-r e f") 'eclim-project-goto)
+
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+;; Java
+;; (global-set-key (kbd "C-r e s") 'start-eclimd)
+;; (global-set-key (kbd "C-r e k") 'stop-eclimd)
+;; (global-set-key (kbd "C-r e f") 'eclim-project-goto)
 
 
 
@@ -63,9 +65,6 @@
 ;; (global-set-key (kbd "C->") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
-;; move line or region up and down (my defuns)
-(global-set-key (kbd "<M-up>") 'hg-move-line-region-up)
-(global-set-key (kbd "<M-down>") 'hg-move-line-region-down)
 
 ;; Jump to a definition in the current file. (This is awesome.)
 (global-set-key (kbd "C-x C-i") 'ido-imenu)

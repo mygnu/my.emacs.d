@@ -1,13 +1,13 @@
-;;; hg-prog-mode.el --- progmode hooks
+;;; hg-move-dup.el --- 
 ;; 
-;; Filename: hg-progmode.el
+;; Filename: hg-move-dup.el
 ;; Description: 
-;; Author: 
-;; Created: Sun Mar  9 10:53:23 2014 (+1030)
+;; Author: harry
+;; Created: Mon May 25 21:30:46 2015 (+1000)
 ;; Version: 
 ;; Package-Requires: ()
-;; Last-Updated: Sun Mar  9 10:56:17 2014 (+1030)
-;;     Update #: 2
+;; Last-Updated: 
+;;     Update #: 0
 ;; 
 ;; 
 ;; 
@@ -27,16 +27,21 @@
 ;; 
 ;;; Code:
 
-(add-hook 'prog-mode-hook   'flyspell-prog-mode)
-(add-hook 'prog-mode-hook   'which-func-mode)
-(add-hook 'prog-mode-hook   'highlight-symbol-mode)
-(add-hook 'prog-mode-hook   'flycheck-mode)
+(unless (package-installed-p 'move-dup)
+  (package-refresh-contents) (package-install 'move-dup))
 
-;;elisp mode
-(add-hook 'emacs-lisp-mode-hook 'auto-make-header)
+(move-dup-mode t)
+;; move duplicate stuff
+(eval-after-load 'move-dup
+  '(progn
+     (global-set-key (kbd "M-<up>") 'md/move-lines-up)
+     (global-set-key (kbd "M-<down>") 'md/move-lines-down)
+     (global-set-key (kbd "C-S-<up>") 'md/duplicate-up)
+     (global-set-key (kbd "C-S-<down>") 'md/duplicate-down)))
+
+(provide 'hg-move-dup)
 
 
 
-(provide 'hg-prog-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; hg-progmode.el ends here
+;;; hg-move-dup.el ends here

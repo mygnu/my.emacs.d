@@ -26,8 +26,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;; Code:
+(unless (package-installed-p 'web-mode)
+  (package-refresh-contents) (package-install 'web-mode))
+
+
 (require 'web-mode)
-(require 'sgml-mode)
+;(require 'sgml-mode)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
@@ -40,8 +44,16 @@
 
 (setq web-mode-engines-alist '(("php" . "\\.php\\'") ("blade" . "\\.blade\\.")) )
 ;; automatic indentation
-(define-key web-mode-map (kbd "RET") 'newline-and-indent)
-(sp-local-pair 'web-mode "{" nil :post-handlers '((hg-create-newline-and-enter-sexp "RET")))
+;(define-key web-mode-map (kbd "RET") 'newline-and-indent)
+;(sp-local-pair 'web-mode "{" nil :post-handlers '((hg-create-newline-and-enter-sexp "RET")))
+
+(setq web-mode-enable-auto-pairing t)
+(setq web-mode-enable-css-colorization t)
+(setq web-mode-enable-block-face t)
+(setq web-mode-ac-sources-alist
+  '(("css" . (ac-source-css-property))
+    ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+  
 
 (defun hg-syntax-color-hex ()
   "Syntax color hex color spec such as 「#ff1100」 in current buffer."
@@ -57,32 +69,7 @@
   )
 (add-hook 'web-mode-hook 'hg-syntax-color-hex)
 
-(defun web-mode-match-paren (arg)
-  "Go to the matching tag if on tag, otherwise insert %."
-  (interactive "p")
-  (cond ((looking-at "<")
-         (sgml-skip-tag-forward 1))
-        ((looking-back ">")
-         (sgml-skip-tag-backward 1))
-        (t (self-insert-command (or arg 1)))))
 
-(defun web-mode-element-unwrap ()
-  "Like `web-mode-element-vanish', but you don't need jump parent tag to unwrap.
-Just like `paredit-splice-sexp+' style."
-  (interactive)
-  (save-excursion
-    (web-mode-element-parent)
-    (web-mode-element-vanish)
-    (back-to-indentation)
-    ))
-
-(defun my-web-mode-hook ()
-  (setq web-mode-enable-auto-pairing nil)
-  ;(flycheck-mode t)
-  (smartparens-mode t)
-  (auto-complete-mode t))
-
-(add-hook 'web-mode-hook 'my-web-mode-hook)
 
 
 (provide 'hg-web-mode)

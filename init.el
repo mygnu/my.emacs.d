@@ -1,15 +1,14 @@
 
 ;;INIT.el folders
-
+;;; Code:
 (add-to-list 'load-path "/data/git/my.emacs.d")
 (add-to-list 'load-path "/data/git/my.emacs.d/config")
 
 (require 'hg-elpa-packages)
-                                        ;(add-hook 'after-init-hook (lambda () (load "~/.emacs.d/config/hg-configuration.el")))
 (require 'hg-configuration)
 
 
-;; dont change below this
+;; don't change below this
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -72,7 +71,8 @@ General Public License for more details.")
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Inconsolata" :foundry "unknown" :slant normal :weight normal :height 150 :width normal))))
+ '(default ((t (:family "Inconsolata" :foundry "unknown" :slant normal :weight normal :height 155 :width normal))))
  '(flymake-errline ((t (:foreground "red"))))
  '(font-lock-warning-face ((t (:foreground "red" :weight bold))))
  '(hi-blue-b ((t (:foreground "deep sky blue" :weight bold)))))
+;;; init.el ends here

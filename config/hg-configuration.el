@@ -61,6 +61,7 @@
 (require 'hg-ace-jump)
 (require 'hg-alias)
                                         ;(require 'hg-arduino)
+                                        ;(require 'hg-yasnippet) ;auto required in hg-auto-complete
 (require 'hg-auto-complete)
                                         ;(require 'hg-binview)
                                         ;(require 'hg-cc-mode)
@@ -85,17 +86,19 @@
 (require 'hg-ido)
 (require 'hg-key-bindings)
                                         ;(require 'hg-multiple-cursor)
-;(require 'hg-java)
+                                        ;(require 'hg-java)
+(require 'hg-move-dup)
 (require 'hg-prog-mode)
                                         ;(require 'hg-python)
                                         ;(require 'hg-scala)
 (require 'hg-shell-mode)
 
 (require 'hg-sr-speedbar)
-;(require 'hg-vala-mode)
-                                        ;(require 'hg-web-mode)
+                                        ;(require 'hg-vala-mode)
+(require 'hg-web-mode)
 (require 'hg-whole-line-or-region)
-(require 'hg-yasnippet)
 
 
 (provide 'hg-configuration)
+
+

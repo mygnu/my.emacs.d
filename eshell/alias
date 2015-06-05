@@ -34,6 +34,7 @@ alias hibernate sudo hibernate $*
 alias ip export EDITOR="emacs"; ipython; source ~/.bashrc $*
 alias j jobs -l $*
 alias l ls $LS_OPTIONS -lhF $*
+alias lamppstart sudo /opt/lampp/lampp start $*
 alias ll ls $LS_OPTIONS -alhF $*
 alias ls ls $LS_OPTIONS $*
 alias ls. CLICOLOR_FORCE=true ls $LS_OPTIONS -alhF|less $*

@@ -22,7 +22,7 @@
  '(desktop-base-file-name "~/.emacs.d/desktop")
  '(desktop-save-mode t)
  '(expand-region-skip-whitespace nil)
- '(fill-column 72)
+ '(fill-column 80)
  '(flymake-log-file-name "~/.emacs.d/flymake.log")
  '(flymake-log-level 0)
  '(flymake-number-of-errors-to-display 1)

@@ -1,5 +1,9 @@
+(unless (package-installed-p 'icicles)
+  (package-refresh-contents) (package-install 'icicles))
+
+
 ;; icicle-mode
-(icicle-mode t)
+(icy-mode t)
 
 
 

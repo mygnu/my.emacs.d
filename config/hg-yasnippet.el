@@ -57,3 +57,4 @@
 ;; ;(setq yas-prompt-functions '(yas-popup-prompt yas-no-prompt)) 
 
 (provide 'hg-yasnippet)
+

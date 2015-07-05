@@ -29,11 +29,11 @@
 
 (add-hook 'prog-mode-hook   'flyspell-prog-mode)
 (add-hook 'prog-mode-hook   'which-func-mode)
-(add-hook 'prog-mode-hook   'highlight-symbol-mode)
+;; (add-hook 'prog-mode-hook   'highlight-symbol-mode)
 (add-hook 'prog-mode-hook   'flycheck-mode)
 
 ;;elisp mode
-(add-hook 'emacs-lisp-mode-hook 'auto-make-header)
+;; (add-hook 'emacs-lisp-mode-hook 'auto-make-header)
 
 
 

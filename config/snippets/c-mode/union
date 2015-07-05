@@ -2,7 +2,6 @@
 # name: union
 # key: union
 # --
-typedef union 
-{
+typedef union {
         $0
 } ${1:name};

@@ -16,7 +16,7 @@
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-t") 'backward-paragraph)
 ;; Use regex searches by default.
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+;; (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 ;; (global-set-key (kbd "\C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
@@ -27,6 +27,7 @@
 (key-chord-define-global "uu" 'undo)
 (key-chord-define-global ",." "<>\C-b")
 (key-chord-define-global "--" "_")
+(key-chord-define-global "dd" 'kill-whole-line)
 (key-chord-define-global "/=" "\C-a //") ;; comment in cc-mode
 (key-chord-define-global ";;"  'column-newline)  ;; ; at the end of the line;
 (key-chord-define-global "jj" 'join-line)
@@ -71,6 +72,7 @@
 (global-set-key (kbd "<C-tab>") 'hg-indent-whole-buffer)
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
+(global-set-key (kbd "M-;") 'comment-dwim)  
 
 ;; Completion that uses many different methods to find options.
 (global-set-key (kbd "M-/") 'hippie-expand)
@@ -84,10 +86,10 @@
 (key-chord-define-global "22" 'split-window-vertically)
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 ;; windows resize
-(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-<down>") 'shrink-window)
-(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+;; (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+;; (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "S-C-<down>") 'shrink-window)
+;; (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 ;; Window switching. (C-x o goes to the next window)
 ;;(windmove-default-keybindings) ;; Shift+direction
 (key-chord-define-global "90" 'hg-toggle-eshell-visor)
@@ -105,7 +107,6 @@
 ;; Buffers
 (global-set-key (kbd "C-c f r") 'hg-rename-current-buffer-file)
 (global-set-key (kbd "C-c f d") 'hg-delete-current-buffer-file)
-(key-chord-define-global "[]" 'hg-switch-between-two-buffers)
 (global-set-key (kbd "C-c s") 'hg-switch-between-two-buffers)
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
@@ -120,6 +121,7 @@
 
 ;; Start eshell or switch to it if it's active.
 (global-set-key (kbd "C-x m") 'shell)
+(global-set-key (kbd "C-*") 'shell)
 ;; Start a new eshell even if one is active.
 (global-set-key (kbd "C-x M") (lambda () (interactive) (eshell t)))
 ;; Start a regular shell if you prefer that.
@@ -132,7 +134,8 @@
 ;; escape key is once is enough
 (global-set-key(kbd "<escape>") 'keyboard-escape-quit)
 (global-set-key (kbd "M-<f3>") 'find-grep)
-
+(global-set-key (kbd "<f3>") 'isearch-forward-regexp)
+(global-set-key (kbd "<f4>") 'hg-switch-between-two-buffers)
 (global-set-key (kbd "<f5>") 'kill-this-buffer); kill currunt buffer
 (global-set-key (kbd "M-<f5>") 'delete-window); delete current window
 

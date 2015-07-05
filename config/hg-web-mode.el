@@ -30,9 +30,10 @@
   (package-refresh-contents) (package-install 'web-mode))
 
 
-(require 'web-mode)
-;(require 'sgml-mode)
 
+(require 'web-mode)
+                                        ;(require 'sgml-mode)
+(add-to-list 'auto-mode-alist '("\.scss$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
@@ -42,18 +43,41 @@
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
-(setq web-mode-engines-alist '(("php" . "\\.php\\'") ("blade" . "\\.blade\\.")) )
+;; (setq web-mode-engines-alist
+;;       '(("php" . "\\.php\\'")
+;;         ("blade" . "\\.blade\\."))
+;;       )
 ;; automatic indentation
-;(define-key web-mode-map (kbd "RET") 'newline-and-indent)
-;(sp-local-pair 'web-mode "{" nil :post-handlers '((hg-create-newline-and-enter-sexp "RET")))
+(define-key web-mode-map (kbd "C-c /") 'web-mode-element-close)
+(define-key web-mode-map (kbd "RET") 'newline-and-indent)
+(define-key web-mode-map (kbd "<f10>") 'hg-toggle-web-element)
+
+(defun expand-for-web-mode ()
+  (when (equal mode-name "Web")
+    (make-local-variable 'yas-extra-modes)
+    (setq yas-extra-modes
+          (let ((web-lang (web-mode-language-at-pos)))
+            (cond
+             ((equal web-lang "html")       '(html-mode))
+             ((equal web-lang "css")        '(css-mode))
+             ((equal web-lang "javascript") '(javascript-mode))
+             )))))
+
+(add-hook 'yas-before-expand-snippet-hook 'expand-for-web-mode)
+
+(sp-local-pair 'web-mode "{" nil :post-handlers '((hg-create-newline-and-enter-sexp "RET")))
 
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-css-colorization t)
 (setq web-mode-enable-block-face t)
+;; (setq web-mode-enable-current-element-highlight t)
+(setq web-mode-enable-current-column-highlight t)
+
+
 (setq web-mode-ac-sources-alist
-  '(("css" . (ac-source-css-property))
-    ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
-  
+      '(("css" . (ac-source-css-property))
+        ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+
 
 (defun hg-syntax-color-hex ()
   "Syntax color hex color spec such as 「#ff1100」 in current buffer."
@@ -67,9 +91,22 @@
           'face (list :background (match-string-no-properties 0)))))))
   (font-lock-fontify-buffer)
   )
-(add-hook 'web-mode-hook 'hg-syntax-color-hex)
 
+(add-hook 'scss-mode-hook 'hg-syntax-color-hex)
 
+(defun hg-toggle-web-element()
+  (interactive)
+  (web-mode-fold-or-unfold)
+  (hg-indent-whole-buffer)
+  )
+
+;; (defun my-web-mode-hook ()
+;;   "Hooks for Web mode."
+;;   (setq web-mode-markup-indent-offset 1)
+;;   (setq web-mode-css-indent-offset 1)
+;;   (setq web-mode-code-indent-offset 1))
+
+;; (add-hook 'web-mode-hook  'my-web-mode-hook)
 
 
 (provide 'hg-web-mode)

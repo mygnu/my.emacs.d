@@ -128,6 +128,23 @@ to cause them to autoindent.")
         (indent-for-tab-command)))
     (indent-for-tab-command)))
 
+(defun comment-dwim ()
+  "Replacement for comment dwim command,
+if no region is selected current line will be commented out"
+  (interactive)
+  (let ((start (line-beginning-position))
+        (end (line-end-position)))
+    (when (region-active-p)
+      (setq start (save-excursion
+                    (goto-char (region-beginning))
+                    (beginning-of-line)
+                    (point))
+            end (save-excursion
+                  (goto-char (region-end))
+                  (end-of-line)
+                  (point))))
+    (comment-or-uncomment-region start end)))
+
 (provide 'hg-defun-edit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

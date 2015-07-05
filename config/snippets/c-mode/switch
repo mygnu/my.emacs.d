@@ -2,8 +2,7 @@
 # name: switch
 # key: case
 # --
-switch (${1:ch}) 
-{
+switch (${1:ch}) {
        case ${2:const}:
        ${3:a = b};
        break;

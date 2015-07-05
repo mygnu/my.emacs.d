@@ -1,6 +1,7 @@
 alias - cd - $*
 alias .. za .. $*
 alias alert notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e 's/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//')" $*
+alias c cd ~/Code $*
 alias cd za $*
 alias cls clear $*
 alias cp cp -i $*
@@ -19,10 +20,11 @@ alias f find . | grep -v ".git" $*
 alias ff find . -name "$@" $*
 alias g grep --color=auto --exclude=*gif --exclude=*svn* $*
 alias ga git add -p $*
+alias gaA git add -A $*
 alias gba git branch -a $*
+alias gc git checkout $*
 alias gc- git checkout - $*
 alias gcb git checkout -b $*
-alias gch git checkout $*
 alias gcm git checkout master $*
 alias gd git diff $*
 alias gg git grep $*
@@ -56,7 +58,7 @@ alias reboot sudo reboot $*
 alias rm rm -i $*
 alias sem sudo emacs -nw $*
 alias semacs sudo emacs $*
-alias shut sudo shutdown -h -t 0 $*
+alias shutdown sudo shutdown -h -t 0 $*
 alias snaut sudo nautilus . $*
 alias tail tail -n 100 $*
 alias vi vim -X $*

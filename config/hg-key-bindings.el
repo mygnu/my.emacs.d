@@ -136,7 +136,7 @@
 (global-set-key (kbd "M-<f3>") 'find-grep)
 (global-set-key (kbd "<f3>") 'isearch-forward-regexp)
 (global-set-key (kbd "<f4>") 'hg-switch-between-two-buffers)
-(global-set-key (kbd "<f5>") 'kill-this-buffer); kill currunt buffer
+(global-set-key (kbd "<f5>") 'kill-buffer-but-not-some); kill currunt buffer
 (global-set-key (kbd "M-<f5>") 'delete-window); delete current window
 
 (global-set-key (kbd "<f6>") 'ido-switch-buffer)

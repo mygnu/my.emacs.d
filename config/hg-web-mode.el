@@ -28,12 +28,16 @@
 ;;; Code:
 (unless (package-installed-p 'web-mode)
   (package-refresh-contents) (package-install 'web-mode))
+(unless (package-installed-p 'scss-mode)
+  (package-refresh-contents) (package-install 'scss-mode))
 
 
 
 (require 'web-mode)
-                                        ;(require 'sgml-mode)
-(add-to-list 'auto-mode-alist '("\.scss$" . web-mode))
+(require 'scss-mode)
+
+(setq scss-compile-at-save nil)                                      ;(require 'sgml-mode)
+(add-to-list 'auto-mode-alist '("\.scss$" . scss-mode))
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
@@ -66,6 +70,7 @@
 (add-hook 'yas-before-expand-snippet-hook 'expand-for-web-mode)
 
 (sp-local-pair 'web-mode "{" nil :post-handlers '((hg-create-newline-and-enter-sexp "RET")))
+(sp-local-pair 'scss-mode "{" nil :post-handlers '((hg-create-newline-and-enter-sexp "RET")))
 
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-css-colorization t)
@@ -100,13 +105,24 @@
   (hg-indent-whole-buffer)
   )
 
-;; (defun my-web-mode-hook ()
-;;   "Hooks for Web mode."
-;;   (setq web-mode-markup-indent-offset 1)
-;;   (setq web-mode-css-indent-offset 1)
-;;   (setq web-mode-code-indent-offset 1))
+;; (setq web-mode-ac-sources-alist
+;;       '(("php" . (ac-source-yasnippet ac-source-php-auto-yasnippets))
+;;         ("html" . (ac-source-emmet-html-aliases ac-source-emmet-html-snippets))
+;;         ("css" . (ac-source-css-property ac-source-emmet-css-snippets))))
 
-;; (add-hook 'web-mode-hook  'my-web-mode-hook)
+;; (add-hook 'web-mode-before-auto-complete-hooks
+;;           '(lambda ()
+;;              (let ((web-mode-cur-language
+;;                     (web-mode-language-at-pos)))
+;;                (if (string= web-mode-cur-language "php")
+;;                    (yas-activate-extra-mode 'php-mode)
+;;                  (yas-deactivate-extra-mode 'php-mode))
+;;                (if (string= web-mode-cur-language "ruby")
+;;                    (yas-activate-extra-mode 'ruby-mode)
+;;                  (yas-deactivate-extra-mode 'ruby-mode))
+;;                (if (string= web-mode-cur-language "css")
+;;                    (setq emmet-use-css-transform t)
+;;                  (setq emmet-use-css-transform nil)))))
 
 
 (provide 'hg-web-mode)

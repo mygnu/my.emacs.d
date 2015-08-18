@@ -26,10 +26,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
 ;;; Code:
-
-(add-hook 'prog-mode-hook   'flyspell-prog-mode)
-(add-hook 'prog-mode-hook   'which-func-mode)
+;; (setq ispell-program-name "hunspell")
+;; (setq ispell-really-hunspell t)
+;; (add-hook 'prog-mode-hook   'flyspell-prog-mode)
 ;; (add-hook 'prog-mode-hook   'highlight-symbol-mode)
+(add-hook 'prog-mode-hook   'which-func-mode)
 (add-hook 'prog-mode-hook   'flycheck-mode)
 
 ;;elisp mode

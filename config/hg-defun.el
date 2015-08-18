@@ -156,6 +156,14 @@
   (interactive)
   (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
 
+;; you can modify that list, to fit your needs // from emacswiki.org
+(setq not-to-kill-buffer-list '("*scratch*" "#emacs" "*Messages*" "irc.freenode.net:6667"))
+(defun kill-buffer-but-not-some ()
+  (interactive)
+  (if (member (buffer-name (current-buffer)) not-to-kill-buffer-list)
+      (bury-buffer)
+    (kill-buffer (current-buffer))))
+
 
 
 ;; Switch buffer between frames
@@ -240,7 +248,7 @@
     (byte-compile-file buffer-file-name)))
 
 (add-hook 'after-save-hook 'byte-compile-current-buffer)
- 
+
 
 (provide 'hg-defun)
 ;;; hg-dufun.el ends here

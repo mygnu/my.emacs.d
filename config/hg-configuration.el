@@ -33,7 +33,7 @@
 ;; Turn off mouse interface early in startup to avoid momentary display
 ;; You really don't need these; trust me.
 ;; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+;(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; winner mode to save windows configuration
@@ -72,7 +72,7 @@
 ;; (require 'hg-diminish)
 ;; (require 'hg-emacs-code-browser)
 ;; (require 'hg-expand-region)
-;; (require 'hg-evil)
+(require 'hg-evil)
 ;; (require 'hg-fci)
 ;; (require 'hg-flycheck)
 ;; (require 'hg-flymake)
@@ -81,7 +81,7 @@
 ;; (require 'hg-header2)
 ;; (require 'hg-highlight-symbol)
 ;; (require 'hg-icicle)
-;; (require 'hg-ido)
+(require 'hg-ido)
 ;; (require 'hg-key-bindings)
 ;; (require 'hg-multiple-cursor)
 ;; (require 'hg-java)

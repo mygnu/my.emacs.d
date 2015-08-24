@@ -15,9 +15,9 @@
 
 ;;; Code:
 ;; gtags must be loaded in the beginnig
-(setq load-path (cons "/usr/share/emacs24/site-lisp/global/gtags.elc"
-                      load-path))
-(autoload 'gtags-mode "gtags" "" t)
+;; (setq load-path (cons "/usr/share/emacs24/site-lisp/global/gtags.elc"
+;;                      load-path))
+;; (autoload 'gtags-mode "gtags" "" t)
 
 ;; autosave dir
 (defvar my-auto-save-folder "~/.emacs.d/auto-save-list/"); folder for auto-saves
@@ -51,53 +51,51 @@
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
                                         ;(flyspell-mode t)
                                         ;(visual-line-mode t)
-(setq-default indent-tabs-mode nil)
-(byte-recompile-directory "." 0)
 
-
-(require 'hg-smartparens)
+;;(require 'hg-smartparens)
 
 ;; (require 'hg-abbrev)
-(require 'hg-ace-jump)
+;;(require 'hg-ace-jump)
 ;; (require 'hg-alias)
 ;; (require 'hg-arduino)
 ;; (require 'hg-auto-complete) ;; also includes yasnippet
 ;; (require 'hg-binview)
 ;; (require 'hg-cc-mode)
 ;; (require 'hg-cedet)
-(require 'hg-company)
+;; (require 'hg-company)
 ;; (require 'hg-c-eldoc)
-(require 'hg-centered-cursor)
-(require 'hg-chord)
-(require 'hg-color-theme)
-(require 'hg-defun)
-(require 'hg-defun-edit)
+;; (require 'hg-centered-cursor)
+;; (require 'hg-chord)
+;; (require 'hg-color-theme)
+;; (require 'hg-defun)
+;; (require 'hg-defun-edit)
 ;; (require 'hg-diminish)
 ;; (require 'hg-emacs-code-browser)
-(require 'hg-expand-region)
-(require 'hg-fci)
-(require 'hg-flycheck)
+;; (require 'hg-expand-region)
+;; (require 'hg-evil)
+;; (require 'hg-fci)
+;; (require 'hg-flycheck)
 ;; (require 'hg-flymake)
 ;; (require 'hg-go-mode)
 ;; (require 'hg-google-this)
 ;; (require 'hg-header2)
 ;; (require 'hg-highlight-symbol)
 ;; (require 'hg-icicle)
-(require 'hg-ido)
-(require 'hg-key-bindings)
+;; (require 'hg-ido)
+;; (require 'hg-key-bindings)
 ;; (require 'hg-multiple-cursor)
 ;; (require 'hg-java)
-(require 'hg-move-dup)
-(require 'hg-prog-mode)
-(require 'hg-ruby)
+;; (require 'hg-move-dup)
+;; (require 'hg-prog-mode)
+;; (require 'hg-ruby)
 ;; (require 'hg-python)
 ;; (require 'hg-scala)
-(require 'hg-shell-mode)
+;; (require 'hg-shell-mode)
 
 ;; (require 'hg-sr-speedbar)
 ;; (require 'hg-vala-mode)
-(require 'hg-web-mode)
-(require 'hg-whitespace)
+;; (require 'hg-web-mode)
+;; (require 'hg-whitespace)
 ;; (require 'hg-whole-line-or-region)
 
 

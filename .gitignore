@@ -3,5 +3,6 @@ auto-save-list
 desktop
 emacs-backup/
 ido.last
-recentf
+*recentf
 elpa
+config/bkp*

@@ -3,6 +3,7 @@
 (unless (package-installed-p 'powerline-evil)
   pagkafe-install 'powerline-evil)
 (require 'powerline-evil)
+(require 'hg-evil-nerd-commenter)
 
 (require 'cl) ;; required for the following function
 ;; defuns for fill keymap
@@ -53,7 +54,7 @@ See `pour-mappings-to'."
 
 
 (setq evil-move-cursor-back nil) ;;and maybe also:
-                                     
+(evil-mode 1)
 (eval-after-load 'evil
   '(progn
      (powerline-center-evil-theme)
@@ -69,87 +70,93 @@ See `pour-mappings-to'."
 
      (fill-keymap evil-normal-state-map
                   (kbd "TAB") #'indent-for-tab-command
-		  (kbd "s-z") #'evil-emacs-state
-		  (kbd "s-l") #'org-link
-		  (kbd "s-z") #'evil-normal-state
-		  (kbd "C-w h") #'windmove-down
-		  (kbd "C-w t") #'windmove-up
-		  (kbd "b") #'(lambda ()
-				"Switch to the previous buffer"
-				(interactive)
-				(switch-to-buffer nil))
-		  "B" #'(lambda ()
-			  "display all possible buffers and pick the one you want"
-			  (interactive)
-			  (list-buffers))
-		  ;;(define-key evil-normal-state-map (kbd "Q") 'anzu-query-replace-regexp)
-		  ;; This for when I use visual line mode mode. Now visual line mode should work for basic
-		  ;; key movements
-		  ;; This is not working.
-		  (kbd "h") #'next-line
-		  (kbd "t") #'previous-line
-		  (kbd "n") #'backward-char
-		  (kbd "l") #'forward-char
-		  "k" 'kill-line
-		  "K" #'(lambda () (interactive)
-			  "kill from point to the beginning of the line"
-			  (kill-line 0))
-		  "I" 'evil-append
-		  "$" 'ispell-word
-		  ";" 'endless/comment-line
-		  (kbd "C-s") 'evil-substitute
-		  "s" 'evil-forward-char
-		  "n" 'evil-backward-char
-		  (kbd "C-l") 'recenter-top-bottom
-		  "l" 'recenter-top-bottom
-		  "o" 'evil-backward-word-begin
-		  "e" 'evil-forward-word-begin
-		  "O" 'evil-backward-WORD-end
-		  "E" 'evil-forward-WORD-end
-		  "J" 'join-line
-		  "j" #'(lambda () (interactive)
-			  "join this line at the end of the line below"
-			  (join-line 1))
-		  (kbd "C-h") 'evil-open-below
-		  (kbd "C-t") 'evil-open-above
-		  (kbd "C-c r") 'evil-record-macro
-		  ;; (kbd "C-w h") 'windmove-down
-		  ;; (kbd "C-w t") 'windmove-up
-		  ;; (kbd "C-w n") 'windmove-left
-		  ;; (kbd "C-w s") 'windmove-right
-		  "," 'undo-tree-undo
-		  "'" 'evil-goto-mark
-		  "Q" 'anzu-query-replace-regexp
-		  (kbd "q") '(lambda ()
-			       "q saves the current buffer, then kills it.  I should add a checking mechanism... If the buffer name starts and ends with *, then do not save the buffer"
-			       (interactive)
-			       (save-buffer)
-			       (let (kill-buffer-query-functions) (kill-buffer)))
-		  (kbd "<backspace>") 'ace-jump-char-mode
-		  (kbd "l") 'recenter-top-bottom
-		  ;;there is no need to set return to newline-and-indent, because electric-indent-mode is now on by default.
-		  ;;at least so the documentation claimed
-		  (kbd "<return>") 'newline-and-indent
-		  (kbd "a") 'evil-first-non-blank
-		  (kbd "A") 'evil-insert-line
-		  (kbd "u") 'evil-end-of-line
-		  (kbd "U") 'evil-append-line
-		  (kbd "C-d") 'delete-char
-		  (kbd "<") 'beginning-of-buffer
-		  (kbd ">") 'end-of-buffer
-		  (kbd "l") 'recenter-top-bottom
-		  ;;there is no need to set return to newline-and-indent, because electric-indent-mode is now on by default.
-		  (kbd "<return>") 'newline-and-indent
-		  (kbd "C-a") 'mark-whole-buffer)
+                  (kbd "s-z") #'evil-emacs-state
+                  (kbd "s-l") #'org-link
+                  (kbd "s-z") #'evil-normal-state
+                  (kbd "C-w h") #'windmove-down
+                  (kbd "C-w t") #'windmove-up
+                  (kbd "b") #'(lambda ()
+                                "Switch to the previous buffer"
+                                (interactive)
+                                (switch-to-buffer nil))
+                  "B" #'(lambda ()
+                          "display all possible buffers and pick the one you want"
+                          (interactive)
+                          (list-buffers))
+                  ;;(define-key evil-normal-state-map (kbd "Q") 'anzu-query-replace-regexp)
+                  ;; This for when I use visual line mode mode. Now visual line mode should work for basic
+                  ;; key movements
+                  ;; This is not working.
+                  (kbd "h") #'next-line
+                  (kbd "t") #'previous-line
+                  (kbd "n") #'backward-char
+                  (kbd "s") #'forward-char
+                  "k" 'kill-line
+                  "K" #'(lambda () (interactive)
+                          "kill from point to the beginning of the line"
+                          (kill-line 0))
+                  "I" 'evil-append
+                  "$" 'ispell-word
+                  ";" 'evilnc-comment-or-uncomment-lines
+                  "C-c l" 'evilnc-quick-comment-or-uncomment-to-the-line
+                  "C-c c" 'evilnc-copy-and-comment-lines
+                  "C-c p" 'evilnc-comment-or-uncomment-paragraphs
+                  "C-s" 'evil-substitute
+                  (kbd "C-l") 'recenter-top-bottom
+                  "l" 'recenter-top-bottom
+                  "\M-o" 'evil-open-above
+                  "\C-o" 'evil-open-below
+                  "o" 'evil-backward-word-begin
+                  "e" 'evil-forward-word-begin
+                  "O" 'evil-backward-WORD-end
+                  "E" 'evil-forward-WORD-end
+		  "j" 'join-line
+                  "J" #'(lambda () (interactive)
+                          "join this line at the end of the line below"
+                          (join-line 1))
+                  (kbd "C-h") 'evil-open-below
+                  (kbd "C-t") 'evil-open-above
+                  (kbd "C-c r") 'evil-record-macro
+                  ;; (kbd "C-w h") 'windmove-down
+                  ;; (kbd "C-w t") 'windmove-up
+                  ;; (kbd "C-w n") 'windmove-left
+                  ;; (kbd "C-w s") 'windmove-right
+                  "," 'undo-tree-undo
+                  "'" 'evil-goto-mark
+                  "Q" 'anzu-query-replace-regexp
+                  (kbd "q") '(lambda ()
+                               "q saves the current buffer, then kills it.  I should add a checking mechanism... If the buffer name starts and ends with *, then do not save the buffer"
+                               (interactive)
+                               (save-buffer)
+                               (let (kill-buffer-query-functions) (kill-buffer)))
+                  (kbd "<backspace>") 'ace-jump-char-mode
+                  (kbd "l") 'recenter-top-bottom
+                  ;;there is no need to set return to newline-and-indent, because electric-indent-mode is now on by default.
+                  ;;at least so the documentation claimed
+                  (kbd "<return>") 'newline-and-indent
+                  (kbd "a") 'evil-first-non-blank
+                  (kbd "A") 'evil-insert-line
+                  (kbd "u") 'evil-end-of-line
+                  (kbd "U") 'evil-append-line
+                  (kbd "C-d") 'delete-char
+                  (kbd "<") 'beginning-of-buffer
+                  (kbd ">") 'end-of-buffer
+                  (kbd "l") 'recenter-top-bottom
+                  ;;there is no need to set return to newline-and-indent, because electric-indent-mode is now on by default.
+                  (kbd "<return>") 'newline-and-indent
+                  (kbd "C-a") 'mark-whole-buffer)
 
      (fill-keymap evil-visual-state-map
-		  (kbd "h") #'next-line
-		  (kbd "t") #'previous-line
-		  (kbd "n") #'backward-char
-		  (kbd "l") #'forward-char
-		  )
 
-
+                  (kbd "h") #'next-line
+                  (kbd "t") #'previous-line
+                  (kbd "n") #'backward-char
+                  (kbd "l") #'forward-char
+                  ";" 'evilnc-comment-or-uncomment-lines
+                  "C-c l" 'evilnc-quick-comment-or-uncomment-to-the-line
+                  "C-c c" 'evilnc-copy-and-comment-lines
+                  "C-c p" 'evilnc-comment-or-uncomment-paragraphs
+                  ) 
      ;;key bindings for escape
      (define-key evil-normal-state-map [escape] 'keyboard-quit)
      (define-key evil-visual-state-map [escape] 'keyboard-quit)
@@ -166,7 +173,7 @@ See `pour-mappings-to'."
      (define-key evil-replace-state-map (kbd "<menu>") 'evil-normal-state)
      (define-key evil-emacs-state-map (kbd "<menu>")  'execute-extended-command)
 
-          ;; set state for modes
+     ;; set state for modes
      (evil-set-initial-state 'git-commit-mode 'insert)
      (evil-set-initial-state 'shell-mode 'emacs)
      ))
@@ -175,4 +182,3 @@ See `pour-mappings-to'."
 
 
 (provide 'hg-evil)
-

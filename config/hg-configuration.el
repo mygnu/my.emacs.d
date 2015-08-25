@@ -52,7 +52,7 @@
                                         ;(flyspell-mode t)
                                         ;(visual-line-mode t)
 
-;;(require 'hg-smartparens)
+(require 'hg-smartparens)
 
 ;; (require 'hg-abbrev)
 ;;(require 'hg-ace-jump)
@@ -62,17 +62,17 @@
 ;; (require 'hg-binview)
 ;; (require 'hg-cc-mode)
 ;; (require 'hg-cedet)
-;; (require 'hg-company)
+(require 'hg-company)
 ;; (require 'hg-c-eldoc)
 ;; (require 'hg-centered-cursor)
 ;; (require 'hg-chord)
-;; (require 'hg-color-theme)
-;; (require 'hg-defun)
-;; (require 'hg-defun-edit)
+(require 'hg-color-theme)
+(require 'hg-defun)
+(require 'hg-defun-edit)
 ;; (require 'hg-diminish)
 ;; (require 'hg-emacs-code-browser)
 ;; (require 'hg-expand-region)
-(require 'hg-evil)
+
 ;; (require 'hg-fci)
 ;; (require 'hg-flycheck)
 ;; (require 'hg-flymake)
@@ -82,7 +82,7 @@
 ;; (require 'hg-highlight-symbol)
 ;; (require 'hg-icicle)
 (require 'hg-ido)
-;; (require 'hg-key-bindings)
+(require 'hg-key-bindings)
 ;; (require 'hg-multiple-cursor)
 ;; (require 'hg-java)
 ;; (require 'hg-move-dup)
@@ -94,9 +94,17 @@
 
 ;; (require 'hg-sr-speedbar)
 ;; (require 'hg-vala-mode)
-;; (require 'hg-web-mode)
+(require 'hg-web-mode)
 ;; (require 'hg-whitespace)
 ;; (require 'hg-whole-line-or-region)
-
+(require 'hg-evil)
 
 (provide 'hg-configuration)
+
+
+
+
+
+
+
+
